@@ -1,17 +1,12 @@
-
-
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     overflow-x: hidden; /* Impede rolagem horizontal */
 }
 
-
-
-
 #img1 > img {
-    width: 98%;
-    height: 100%;
+    width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
     object-fit: cover;
     display: block; /* Remove o espaço em branco abaixo da imagem */
     margin: 0;
@@ -21,6 +16,12 @@ body {
     z-index: -1;
 }
 
+#img1 {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Faz com que a imagem ocupe 80% da altura da viewport */
+    overflow: hidden;
+}
 
 #img1::after {
     content: '';
@@ -30,7 +31,7 @@ body {
     top: 0;
     left: 0;
     background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
-    z-index:  0;
+    z-index: 0;
     pointer-events: none;
 }
 
@@ -46,9 +47,6 @@ header {
     left: 0; /* Garante que o header está alinhado à borda esquerda */
     z-index: 1; /* Garante que o header está acima da imagem e do gradiente */
 }
-
-/* Outros estilos permanecem os mesmos */
-
 
 nav ul {
     list-style: none;
@@ -90,7 +88,7 @@ nav ul li a:hover {
 
 .h1 p {
     color: white;
-    font-size: 30px;
+    font-size: 2vw; /* Tamanho relativo à largura da tela */
 }
 
 .quiz-btn {
@@ -105,8 +103,8 @@ nav ul li a:hover {
     color: white;
     border: none;
     border-radius: 10px;
-    padding: 10px;
-    width: 130px;
+    padding: 1vw;
+    width: 15vw; /* Largura baseada na viewport */
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -122,14 +120,15 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .pqs {
     display: flex;
-    gap: 80px; /* Espaçamento entre os parágrafos */
+    flex-wrap: wrap; /* Faz com que os parágrafos quebrem em telas pequenas */
+    gap: 40px;
     max-width: 100%;
     padding: 20px;
-    overflow: hidden;
 }
 
 .pqs p {
@@ -158,7 +157,6 @@ nav ul li a:hover {
     font-size: 30px;
 }
 
-
 .logo-png {
     position: absolute;
     list-style: none;
@@ -180,8 +178,6 @@ nav ul li a:hover {
     color: #ffffff;
 }
 
-
-/* Base do info-box */
 .info-box {
     position: absolute;
     top: 50%;
@@ -201,7 +197,6 @@ nav ul li a:hover {
     visibility: visible; /* Exibe o info-box */
     transform: translate(-50%, -50%) scale(1); /* Expande para tamanho normal */
 }
-
 
 .info-box .info_title {
     height: 60px;
@@ -269,20 +264,66 @@ nav ul li a:hover {
     background: rgb(27, 226, 27);
 }
 
-
-@media screen and (
-    max-width: 1280px) {
-
-        .quiz-btn {
-            position: absolute;
-            top: 82%;
-        }
-
-        .p3 {
-            position: absolute;
-            top: 100%;
-            left: 18%;
-            width: 950px;
-        }
-
+@media screen and (max-width: 1024px) {
+    .quiz-btn {
+        top: 80%;
+        width: 90%;
     }
+
+    .p3 {
+        left: 10%;
+        width: 80%;
+    }
+
+    .h1 p {
+        font-size: 3vw; /* Ajusta o texto para telas médias */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .h1 p {
+        font-size: 4vw; /* Aumenta o tamanho do texto em telas menores */
+    }
+
+    .quiz-btn {
+        top: 85%; /* Ajuste a posição para telas menores */
+    }
+
+    .p3 {
+        left: 5%;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .pqs {
+        flex-direction: column; /* Empilha os parágrafos em telas muito pequenas */
+        gap: 20px; /* Diminui o espaçamento entre os itens */
+    }
+
+    .p3 {
+        left: 5%;
+        width: 90%;
+    }
+
+    #quiz-btn {
+        width: 80%; /* Ajusta a largura do botão */
+    }
+
+    .h1 p {
+        font-size: 5vw; /* Ajuste adicional para telas pequenas */
+    }
+}
