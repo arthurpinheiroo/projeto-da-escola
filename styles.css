@@ -11,14 +11,14 @@ html {
 
 body {
     font-family: 'Roboto', sans-serif;
-   background-color: white;
+    background-color: white;
     color: #000000;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 2vw; /* padding relativo à largura da tela */
     line-height: 1.6; /* Melhor legibilidade */
     font-family: 'Poppins';
 }
@@ -27,79 +27,65 @@ body {
 header {
     width: 100%;
     text-align: center;
-    padding: 30px;
+    padding: 2vw;
     border-radius: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 3vw;
     animation: fadeIn 1s ease-in-out;
-    position: absolute;
-    top: 2%;
-    left: 10px;
-    
+    position: relative; /* Deixei o 'absolute' de lado para mais responsividade */
+    top: 0;
 }
 
-
 header h1 {
-    font-size: 2.5em; /* Tamanho ajustado para melhor hierarquia */
+    font-size: 2.5em;
     color: green;
-    position: absolute;
-    top: 200%;
-    left: 15%;
-    margin-bottom: 10px;
     font-weight: bold;
+    margin-bottom: 1em;
 }
 
 header p {
-    font-size: 1.2em; /* Leve aumento no tamanho da fonte */
-    width: 550px;
-    position: absolute;
-    top: 270%;
-    left: 12%;
-    font-size: 30px;
+    font-size: 1.2em;
     color: inherit;
+    max-width: 80vw; /* Limita o tamanho da largura do texto para 80% da tela */
+    margin: 0 auto;
 }
 
 header .p2 {
-position: absolute;
-top: 490%;
-left: 12%;
-font-size: 18px;
+    font-size: 1em;
+    margin-top: 1em;
 }
 
-/* Menu de navegação */
 /* Menu de navegação */
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Adapta os itens se a tela for pequena */
     padding: 0;
-    margin-bottom: 30px;
+    margin-bottom: 2vw;
 }
 
 nav ul li {
-    margin: 0 15px; /* Ajustar o espaçamento entre os itens */
-    transition: transform 0.3s ease; /* Transição suave para o movimento */
+    margin: 0 15px;
+    transition: transform 0.3s ease;
 }
 
 nav ul li:hover {
-    transform: translateY(-5px); /* Move o item 5px para cima ao passar o mouse */
+    transform: translateY(-5px);
 }
 
 nav ul li a {
     text-decoration: none;
     color: inherit;
-    font-size: 16px;
-    padding: 10px 20px;
+    font-size: 1rem;
+    padding: 1vw 2vw;
     border-radius: 25px;
-    transition: background 0.3s ease, color 0.3s ease; /* Transição suave para cor de fundo e texto */
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.3);
-    color: #000; /* Melhor contraste no hover */
+    color: #000;
 }
-
-
-
 
 /* Seção de dicas */
 main {
@@ -110,38 +96,31 @@ main {
 
 #tip-generator {
     text-align: center;
-    padding: 30px;
+    padding: 2vw;
     border-radius: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 4vw;
     animation: fadeIn 1.5s ease-in-out;
-    position: absolute;
-    top: 94%;
-    left: 25%;
-    font-size: 24px;
-    width: 500px;
+    font-size: 1.5rem;
+    width: 80vw; /* Usei uma largura relativa */
     color: rgb(0, 0, 0);
-    
 }
 
 #generate-tip {
-    background: linear-gradient(135deg, #ffffffcb, #00ff0d); /* Gradiente sutil */
+    background: linear-gradient(135deg, #ffffffcb, #00ff0d);
     color: #ffffff;
     border: none;
-    padding: 22px 25px;
-    font-size: 20px;
+    padding: 1.5rem 2rem;
+    font-size: 1.25rem;
     cursor: pointer;
     border-radius: 30px;
     transition: background 0.3s ease, transform 0.2s ease;
     box-shadow: 0 4px 12px rgba(0, 198, 255, 0.2);
     outline: none;
-    margin-top: 20px;
-    font-family: 'Poppins';
-
-
+    margin-top: 2vw;
 }
 
 #generate-tip:hover {
-    background: linear-gradient(135deg, #ffffff, #00ff0d); /* Alterar gradiente no hover */
+    background: linear-gradient(135deg, #ffffff, #00ff0d);
     transform: scale(1.02);
     box-shadow: 0 6px 16px rgba(0, 198, 255, 0.3);
 }
@@ -151,7 +130,7 @@ main {
 }
 
 #tip {
-    margin-top: 20px;
+    margin-top: 1.5vw;
     font-size: 1.4em;
     color: inherit;
     font-style: italic;
@@ -160,35 +139,28 @@ main {
 /* Seção Sobre Nós */
 #about {
     border-radius: 15px;
-    padding: 30px;
+    padding: 2vw;
     text-align: center;
     backdrop-filter: blur(6px);
-    margin-top: 40px;
+    margin-top: 4vw;
     animation: fadeIn 2s ease-in-out;
-    position: absolute;
-    top: 100%;
-    left: -1%;
 }
 
 #about h2 {
-    font-size: 2.2em; /* Tamanho ajustado para melhor hierarquia */
-    color: inherit;
-    margin-bottom: 15px;
+    font-size: 2.2em;
+    margin-bottom: 1em;
 }
 
 #about p {
-    font-size: 1.2em; /* Leve aumento no tamanho da fonte */
-    color: inherit;
+    font-size: 1.2em;
 }
 
 #coisas-pg {
-    position: absolute;
-    top: 80%;
-    
+    margin-top: 4vw;
 }
 
 #coisas-pg p {
-    width: 500px;
+    width: 100%;
 }
 
 /* Seção Contatos */
@@ -196,36 +168,17 @@ main {
     background: linear-gradient(145deg, #98c455 0%, #019147 100%);
     color: white;
     border-radius: 15px;
-    padding: 30px;
+    padding: 3vw;
     text-align: center;
     backdrop-filter: blur(6px);
-    position: absolute;
-    top: 190%;
-    left: 23%;
-    margin-top: 40px;
+    margin-top: 4vw;
     animation: fadeIn 2s ease-in-out;
-    width: 1000px;
-    height: 400px;
+    max-width: 90vw;
 }
 
 #contact h2 {
-    font-size: 2.2em; /* Tamanho ajustado para melhor hierarquia */
-    color: white;
-    margin-bottom: 15px;
-}
-
-#contact #altina {
-    position: absolute;
-    left: 5%;
-    top: 13%;
-    color: white;
-    font-family: 'Poppins';
-}
-
-#contact p {
-    font-size: 1.2em; /* Leve aumento no tamanho da fonte */
-    color: inherit;
-    margin-bottom: 15px;
+    font-size: 2.2em;
+    margin-bottom: 1.5em;
 }
 
 #contact ul {
@@ -234,31 +187,25 @@ main {
 }
 
 #contact ul li {
-    font-size: 1.1em; /* Ajustado para melhor legibilidade */
-    margin-bottom: 10px;
+    font-size: 1.1em;
+    margin-bottom: 1em;
 }
 
 #contact a {
     color: #00c6ff;
-    text-decoration: none;
-}
-
-#contact a:hover {
-    text-decoration: underline;
 }
 
 #scroll-to-contact {
-    background: linear-gradient(40deg, #ffffff, #00ff0d); /* Gradiente sutil */
+    background: linear-gradient(40deg, #ffffff, #00ff0d);
     color: #ffffff;
     border: none;
-    padding: 12px 25px;
-    font-size: 16px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
     cursor: pointer;
     border-radius: 30px;
     transition: background 0.3s ease, transform 0.1s ease;
     box-shadow: 0 4px 12px rgba(0, 198, 255, 0.2);
     outline: none;
-    margin-top: 20px;
 }
 
 #scroll-to-contact:hover {
@@ -273,8 +220,8 @@ main {
 
 footer {
     text-align: center;
-    margin-top: 40px;
-    font-size: 14px;
+    margin-top: 4vw;
+    font-size: 1rem;
     color: #ffffff;
 }
 
@@ -290,199 +237,6 @@ footer {
     }
 }
 
-/* Imagem com Animação */
-.img1 > img {
-    z-index: -1;
-    width: 1000px;
-    position: absolute;
-    left: 45%;
-    top: 25%;
-    opacity: 0.7;
-    animation: slideIn 1s ease-out, fadeIn 1s ease-out;
-}
-
-/* Animação de Slide In */
-@keyframes slideIn {
-    from {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 0.7;
-    }
-}
-
-/* Animação de Fade In */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 0.7;
-    }
-}
-
-
-.tex-1, .tex-2, .tex-3 {
-    position: absolute;
-    top: 155%;
-    width: 500px;
-    height: 300px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona a sombra */
-    border-radius: 10px; /* Arredonda as bordas */
-    transition: transform 0.3s ease; /* Adiciona uma transição suave ao redimensionamento */
-}
-
-.tex-1 {
-    left: 3%;
-}
-
-.tex-2 {
-    left: 690px;
-}
-
-.tex-3 {
-    left: 72%;
-}
-
-/* Animação ao passar o mouse */
-.tex-1:hover, .tex-2:hover, .tex-3:hover {
-    transform: scale(1.1); /* Aumenta o tamanho para 110% quando o mouse estiver sobre a div */
-}
-
-.logo-png {
-    position: absolute;
-    list-style: none;
-    top: 1%;
-    left: 4%;
-    cursor: pointer;
-}
-
-.logo-png img {
-    width: 90px;
-    cursor: pointer;
-}
-
-.logo-h1 {
-    position: absolute;
-    top: 4%;
-    left: 9%;
-    cursor: pointer;
-}
-
-.entrar-registrar {
-    display: none;
-    position: absolute;
-    left: 80%;
-}
-
-.Entrar {
-    margin-inline: 30px;
-    display: none;
-}
-
-#Entrar {
-    border: none;
-    background-color: #000000; 
-    color: white; 
-    border-radius: 10px;
-    padding: 0.5rem;
-    width: 100px;
-    cursor: pointer;
-    transition: 0.5s ease-in-out; 
-}
-
-#Entrar:hover {
-    background-color: #2b2e2c; 
-    color: #ffffff; 
-}
-
-#Registrar {
-    display: none;
-    border: none;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    border-radius: 10px;
-    padding: 0.5rem;
-    width: 100px;
-    cursor: pointer;
-    transition: 0.5s ease-in-out;
-}
-
-#Registrar:hover {
-    background-color:  #2b2e2c; 
-    color: #ffffff; 
-}
-
-.menu-car img{
-    width: 14px;
-    background-color: rgba(255, 255, 255, 0.3);
-    position: absolute;
-    top: 7-px;
-    left: 30%;
-}
-
-.estufah1 {
-    position: absolute;
-    top: 250%;
-    left: 23%;
-}
-
-.estufah1 h1 {
-    color: green;
-}
-
-.container1 {
-    position: absolute;
-    top: 260%;
-    left: 23%;
-    width: 450px;
-    border: 3px solid #acadad; /* Adiciona uma borda sólida de 3px branca */
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.container2 {
-    position: absolute;
-    top: 285%;
-    left: 23%;
-    width: 450px;
-    border: 3px solid #acadad; /* Adiciona uma borda sólida de 3px branca */
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.img-mundo {
-    position: absolute;
-    top: 250%;
-    left: 50%;
-}
-
-.img-mundo img {
-    width: 600px;
-}
-
-.img2 {
-    position: absolute;
-    top: 90%;
-    left: 55%;
-    width: 500px;
-}
-
-.setas {
-    display: flex;
-    position: absolute;
-    top: 308%;
-    left: 24%;
-}
-
-.left {
-position: absolute;
-left: -115%;
-}
-
-
 /* Para telas pequenas (smartphones em modo retrato) */
 @media (max-width: 600px) {
     body {
@@ -491,40 +245,10 @@ left: -115%;
 
     header h1 {
         font-size: 1.8em;
-        top: 60%;
-        left: 10%;
     }
 
     header p {
         font-size: 1em;
-        top: 80%;
-        left: 8%;
-    }
-
-    .logo-png img {
-        width: 50px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #tip-generator {
-        width: 90%;
-        left: 5%;
-    }
-
-    #contact {
-        width: 90%;
-        left: 5%;
-        padding: 20px;
-    }
-
-    .img1 img, .img2 img, .img-mundo img {
-        width: 100%;
-        left: 0;
-        top: 10%;
     }
 
     .tex-1, .tex-2, .tex-3 {
@@ -532,93 +256,15 @@ left: -115%;
         left: 5%;
         top: 120%;
     }
-
-    .container1, .container2 {
-        width: 90%;
-        left: 5%;
-    }
 }
 
 /* Para telas médias (tablets) */
 @media (min-width: 600px) and (max-width: 1024px) {
     header h1 {
         font-size: 2.2em;
-        top: 55%;
-        left: 10%;
     }
 
     header p {
         font-size: 1.1em;
-        top: 70%;
-        left: 8%;
-    }
-
-    .logo-png img {
-        width: 70px;
-    }
-
-    .tex-1, .tex-2, .tex-3 {
-        width: 90%;
-        left: 5%;
-    }
-
-    #tip-generator {
-        width: 80%;
-        left: 10%;
-    }
-
-    #contact {
-        width: 85%;
-        left: 10%;
-        padding: 20px;
     }
 }
-
-/* Para telas grandes (desktops) */
-@media (min-width: 1024px) {
-    header h1 {
-        font-size: 2.5em;
-        top: 200%;
-        left: 15%;
-    }
-
-    header p {
-        font-size: 1.2em;
-        width: 550px;
-        top: 270%;
-        left: 12%;
-    }
-
-    .tex-1, .tex-2, .tex-3 {
-        width: 500px;
-    }
-
-    #tip-generator {
-        width: 500px;
-        left: 25%;
-    }
-
-    #contact {
-        width: 1000px;
-        left: 23%;
-        padding: 30px;
-    }
-}
-
-nav ul {
-    display: flex;
-    flex-direction: column; /* Ajuste para telas pequenas */
-    align-items: center;
-}
-
-@media (min-width: 768px) {
-    nav ul {
-        flex-direction: row; /* Em telas maiores, disposição em linha */
-    }
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
