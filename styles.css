@@ -611,6 +611,30 @@ nav ul {
     align-items: center;
 }
 
+/* Para laptops e desktops (acima de 1024px) */
+@media (min-width: 1025px) {
+    header h1 {
+        font-size: 2.5rem;
+        top: 10%;
+        left: 10%;
+    }
+
+    .container1, .container2 {
+        width: 70%;
+        left: 15%;
+    }
+
+    #generate-tip {
+        font-size: 1.5rem;
+        padding: 20px 25px;
+    }
+
+    .img1 img, .img2 img, .img-mundo img {
+        width: 800px;
+        left: 50%;
+    }
+}
+
 @media (min-width: 768px) {
     nav ul {
         flex-direction: row; /* Em telas maiores, disposição em linha */
