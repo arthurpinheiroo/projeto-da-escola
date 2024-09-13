@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+    <div class="quiz-container">
+        <div class="score-container">
+            Perguntas restantes: <span id="questionsRemaining">0</span>
+        </div>
+        <h2 id="question">Pergunta do Quiz</h2>
+        <div id="quiz">
+            <ul class="answer-options">
+                <li id="A">
+                    <label for="answerA">Resposta A</label>
+                </li>
+                <li id="B">
+                    <label for="answerB">Resposta B</label>
+                </li>
+                <li id="C">
+                    <label for="answerC">Resposta C</label>
+                </li>
+                <li id="D">
+                    <label for="answerD">Resposta D</label>
+                </li>
+            </ul>
+            <!-- Botão de responder adicionado -->
+            <button id="answerBtn" class="hide">
+                <i class="fas fa-check"></i> Responder
+            </button>
+        </div>
+    </div>
+
+    <div class="result_box hide">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">Você Completou Nosso Quiz!</div>
+        <div class="score_text">
+            <span>Você acertou <span id="finalScore">0</span> de <span id="totalQuestions">0</span> perguntas!</span>
+        </div>
+        <div class="buttons">
+            <button class="restart" id="restartBtn"><i class="fas fa-redo"></i> Recomeçar Quiz</button>
+            <button class="exit-quiz" id="exitBtn"><i class="fas fa-sign-out-alt"></i> Sair Quiz</button>
+        </div>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
